@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Front;
 
 use App\Controllers\BaseController;
 
@@ -78,12 +78,25 @@ class HomePage extends BaseController
     
     public function frontPage()
     {
+        // CSS assets
+        $css = add_assets(['output.css'], 'css', 'front');
+        // JS assets
+        $js = add_assets(['global.js', 'test.js'], 'js', 'front');
+        // Get the assets output
+        $assets = get_assets_output([$js, $css]);
+
+
         $data = [
+            // Add assets to the data array
+            // This will be used in the global header and footer
+            'scripts' => $assets['js'],
+            'styles' => $assets['css'],
+
             'title' => 'Front Page',
-            'tab_title' => 'Front Page'
+            'tab_title' => 'Home / Twitter Clone'
         ];
         echo view('templates/global_header', $data);
-        echo view('front/frontpage', $data);
+        echo view('front/home/frontpage', $data);
         echo view('templates/global_footer', $data);
     }
 }
