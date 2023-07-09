@@ -21,7 +21,7 @@ class View extends BaseView
 
     /**
      * Parser Filters map a filter name with any PHP callable. When the
-     * Parser prepares a variable for display, it will chain it
+     * Parser prepares a variable for display, it will chain it≈
      * through the filters in the order defined, inserting any parameters.
      * To prevent potential abuse, all filters MUST be defined here
      * in order for them to be available for use within the Parser.

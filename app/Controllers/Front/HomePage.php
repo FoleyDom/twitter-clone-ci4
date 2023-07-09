@@ -22,7 +22,7 @@ class HomePage extends BaseController
         // CSS assets
         $css = add_assets(['output.css'], 'css', 'front');
         // JS assets
-        $js = add_assets(['global.js', 'test.js'], 'js', 'front');
+        $js = add_assets(['global.js', 'test.js', 'getPost.js'], 'js', 'front');
         // Get the assets output
         $assets = get_assets_output([$js, $css]);
 
@@ -45,7 +45,7 @@ class HomePage extends BaseController
         // CSS assets
         $css = add_assets(['output.css'], 'css', 'front');
         // JS assets
-        $js = add_assets(['global.js', 'test.js'], 'js', 'front');
+        $js = add_assets(['global.js', 'test.js', 'ajax/getPost.js'], 'js', 'front');
         // Get the assets output
         $assets = get_assets_output([$js, $css]);
 
