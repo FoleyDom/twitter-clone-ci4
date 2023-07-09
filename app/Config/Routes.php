@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->group('', ['namespace' => 'App\Controllers\Front'], function ($routes) {
     $routes->get('/', 'HomePage::view');
     $routes->get('/signup', 'HomePage::frontpage');
+    $routes->post('/ajax/getpost', 'HomePageAjax::getPost');
 });
 
 
