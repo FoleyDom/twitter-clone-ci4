@@ -12,6 +12,14 @@ class HomePageAjax extends BaseController
         //
     }
 
+    public function fetchData()
+    {
+        // Fetch data from the database (you need to customize this part based on your database structure)
+        $data = $this->db->table('posttable')->get()->getResultArray();
+
+        return $this->response->setJSON($data);
+    }
+
     public function getPost()
     {
         $model = new TwitterCloneModel();

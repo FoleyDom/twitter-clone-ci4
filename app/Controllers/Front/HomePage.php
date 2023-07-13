@@ -43,30 +43,7 @@ class HomePage extends BaseController
 
     public function view()
     {
-        // Retrieve data from the database
-        $limit = 10; // Number of posts to fetch per request
-        $offset = 0; // Initial offset
-        // ...
-
-        $postData = [];
-
-        // Fetch posts using the limit and offset
-        $posts = []; // Replace this with your database retrieval code using LIMIT and OFFSET
-
-        foreach ($posts as $post) {
-            // Extract relevant data from each post
-            $username = $post['username'];
-            $content = $post['content'];
-            $date = $post['date'];
-
-            // Add post data to the array
-            $postData[] = [
-                'username' => $username,
-                'content' => $content,
-                'date' => $date
-            ];
-        }
-
+        
 
         // CSS assets
         $css = add_assets(['output.css'], 'css', 'front');
@@ -89,4 +66,6 @@ class HomePage extends BaseController
         echo view('front/home/homepage', $data);
         echo view('templates/global_footer', $data);
     }
+
+   
 }
